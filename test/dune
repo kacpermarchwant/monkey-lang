@@ -1,2 +1,3 @@
 (test
- (name monkey_lang))
+ (name monkey_lang)
+ (libraries alcotest))
