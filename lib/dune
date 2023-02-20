@@ -1,2 +1,5 @@
 (library
- (name monkey_lang))
+ (name monkey_lang)
+ (libraries core)
+ (preprocess
+  (pps ppx_jane)))
