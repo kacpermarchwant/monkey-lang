@@ -33,6 +33,7 @@ type token_type =
 type literal = Literal of string [@@deriving sexp]
 type t = { token_type : token_type; literal : literal } [@@deriving sexp]
 
+(* WARNING: I allow illegal states here, but lets just ignore it for now  *)
 let create token_type ch : t = { token_type; literal = Literal ch }
 
 let match_identifier identifier : token_type =
