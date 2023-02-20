@@ -57,10 +57,6 @@ let next_token lexer : Token.t =
 
   let token =
     match lexer.current_char with
-    (* For some reason I have to use function here.
-       Using { token_type = Eof; literal = Literal "" } directly doesn't compile.
-       If we don't bind match to the expression the problem does not occur.
-       Looks like a bug. *)
     | None -> Token.create Eof ""
     | Some current_char -> (
         let current_char_string = Char.to_string current_char in
